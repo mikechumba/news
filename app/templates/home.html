@@ -1,6 +1,12 @@
 {% extends 'layout.html' %}
 {% block content %}
    <div>
-      {{ headlines }}
+      {% for headline in headlines %}
+            {{ headline.author }}
+            {{ headline.title }}
+            {{ headline.description }}
+            <img src="{{ headline.url_to_image }}" alt="">
+      {% endfor %}
+      
    </div>
 {% endblock %}

@@ -1,5 +1,4 @@
 from flask import Flask,render_template
-for request import get_headlines
 from app import app
 
 app = Flask(__name__)
