@@ -7,6 +7,9 @@ app.config.from_pyfile('config.py')
 
 
 def get_headlines():
+
+
+       
        api_key = app.config['API_KEY']
        url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey='
        get_url = (f'{url}{api_key}')
