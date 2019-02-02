@@ -3,6 +3,7 @@ class Sources:
    Class to create instances of news sources
    '''
 
-   def __init__(self, news_source):
+   def __init__(self,id,name):
       
-      self.news_source = news_source
+      self.id = id
+      self.name = name
