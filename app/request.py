@@ -42,7 +42,7 @@ def get_sources():
        '''
 
        api_key = app.config['API_KEY']
-       url = (f'https://newsapi.org/v2/sources?apiKey=')
+       url = (f'https://newsapi.org/v2/sources?language=en&apiKey=')
        get_url = (f'{url}{api_key}')
        response = requests.get(get_url)
        the_news = response.json()
