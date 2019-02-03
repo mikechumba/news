@@ -3,12 +3,13 @@ from flask import Flask, render_template
 import requests
 from .models import headlines,sources
 
+
+
 Sources = sources.Sources
 Headlines = headlines.Headlines
 
 app = Flask(__name__,instance_relative_config=True)
 app.config.from_pyfile('config.py')
-
 
 def get_headlines(source):
 

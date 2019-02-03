@@ -1,5 +1,9 @@
 from flask import Flask,render_template
-from .request import get_sources,get_headlines
+from app import request
+
+get_sources = request.get_sources()
+
+app = Flask(__name__)
 
 @app.route('/')
 def home():
