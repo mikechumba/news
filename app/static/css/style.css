@@ -3,27 +3,29 @@ nav {
 }
 nav p {
   font-family: 'Playfair Display', serif;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   color: #57737A;
 }
 .sources {
   margin: 3% 3%;
 }
 .source-card {
+  height: 80px;
   box-shadow: 1px 1px 4px 1px rgba(87, 115, 122, 0.4);
-}
-.source-card .grid {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 10px;
-  grid-auto-flow: row;
 }
 .source-card p {
   font-family: 'Work Sans', sans-serif;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 600;
   color: #57737A;
+  margin-left: 15px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 10px;
+  grid-auto-flow: row;
 }
 .error {
   width: 80%;

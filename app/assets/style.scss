@@ -15,7 +15,7 @@ $font-2: 'Work Sans', sans-serif;
 nav {
    @include margins();
    p {
-      @include font(15px, 600, #57737A);
+      @include font(18px, 700, #57737A);
    }
 }
 
@@ -25,20 +25,24 @@ nav {
 }
 
 .source-card {
+   height: 80px;
    box-shadow: 1px 1px 4px 1px rgba(#57737A, 0.4);
 
-   .grid {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      grid-gap: 10px;
-      grid-auto-flow: row;
-   }
-
    p {
-      @include font(14px,normal,#57737A,$font-2)
+      @include font(14px,600,#57737A,$font-2);
+      margin-left: 15px;
    }
 
 }
+
+.grid {
+   display: grid;
+   grid-template-columns: repeat(3, auto);
+   grid-gap: 10px;
+   grid-auto-flow: row;
+}
+
+
 
 
 

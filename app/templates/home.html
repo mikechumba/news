@@ -1,12 +1,19 @@
 {% extends 'layout.html' %}
 {% block content %}
    <div class="sources">
-      {% for source in sources %}
-         <div class="source-card grid">
-            <img src="{{ source.url }}" alt="">
-            <p>{{ source.name }}</p>
-         </div>
-      {% endfor %}
+      <div class="grid">
+         {% for source in sources %}
+            <a href="/headlines/{{ source.id }}">
+               <div class="source-card">
+                  <img src="" alt="">
+                  <p>{{ source.id }}</p>
+                  <p>{{ source.name }}</p>
+                  
+               </div>
+            </a>
+         {% endfor %}
+      </div>
+      
    </div>           
    
 {% endblock %}

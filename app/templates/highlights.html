@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="sources">
+      <div class="grid">
+         {% for headline in headlines %}
+            <a href="{{ headline.url }}">
+               <div class="source-card">
+                  <img src="{{ headline.url_to_image }}" alt="">
+                  <p>{{ headline.author }}</p>
+                  <p>{{ headline.title }}</p>
+                  <p>{{ headline.published_at }}</p>
+               </div>
+            </a>
+         {% endfor %}
+      </div>
+      
+   </div>
+{% endblock %}
+
+
