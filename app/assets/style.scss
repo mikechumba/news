@@ -1,0 +1,18 @@
+$font-1: 'Playfair Display', serif;
+$font-2: 'Work Sans', sans-serif;
+
+@mixin font($size, $weight, $color, $family: $font-1) {
+   font-family: $family;
+   font-size: $size;
+   font-weight: $weight;
+   color: $color;
+}
+
+nav {
+   margin: 10px 15px;
+   p {
+      @include font(15px, 600, #57737A)
+   }
+}
+
+

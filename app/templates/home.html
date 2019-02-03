@@ -1,12 +1,11 @@
 {% extends 'layout.html' %}
 {% block content %}
-   <div>
-      {% for headline in headlines %}
-            {{ headline.author }}
-            {{ headline.title }}
-            {{ headline.description }}
-            <img src="{{ headline.url_to_image }}" alt="">
+   <div class="sources">
+      {% for element in collection %}
+         <div class="source-card">
+            <p>{{ element.name }}</p>
+         </div>
       {% endfor %}
-      
-   </div>
+   </div>           
+   
 {% endblock %}

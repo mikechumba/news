@@ -1,7 +1,9 @@
 
 from flask import Flask, render_template
 import requests
-from models import headlines
+from models import headlines,sources
+
+Sources = sources.Sources
 Headlines = headlines.Headlines
 
 app = Flask(__name__,instance_relative_config=True)
@@ -9,7 +11,9 @@ app.config.from_pyfile('config.py')
 
 @app.route('/')
 def home():
-       return render_template('home.html', headlines=get_headlines('bbc-news'))
+       return render_template('home.html', headlines=get_sources())
+
+
 
 def get_headlines(source):
 
@@ -35,6 +39,28 @@ def get_headlines(source):
                      articles.append(the_articles)
 
        return articles
+
+def get_sources():
+
+       api_key = app.config['API_KEY']
+       url = (f'https://newsapi.org/v2/sources?apiKey=')
+       get_url = (f'{url}{api_key}')
+       response = requests.get(get_url)
+       the_news = response.json()
+       the_sources = the_news['sources']
+
+       sources = []
+       for source in the_sources:
+              source_id = source['id']
+              name = source['name']
+              description = source['description']
+
+
+              if the_sources:
+                     news_sources = Sources(source_id,name,description)
+                     sources.append(news_sources)
+
+       return sources
 
 if __name__ == '__main__':
   app.run(debug=True)
