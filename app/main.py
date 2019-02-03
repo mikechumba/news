@@ -1,8 +1,10 @@
 from flask import Flask,render_template
-from app import app
-
-app = Flask(__name__)
+from .request import get_sources,get_headlines
 
 @app.route('/')
 def home():
-       return render_template('home.html', headlines=the_news)
+       return render_template('home.html', sources=get_sources())
+
+@app.route('/<news_source>')
+def highlights(news_source):
+       return render_template('highlights.html', id=news_source)

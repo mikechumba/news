@@ -1,18 +1,13 @@
 
 from flask import Flask, render_template
 import requests
-from models import headlines,sources
+from .models import headlines,sources
 
 Sources = sources.Sources
 Headlines = headlines.Headlines
 
 app = Flask(__name__,instance_relative_config=True)
 app.config.from_pyfile('config.py')
-
-@app.route('/')
-def home():
-       return render_template('home.html', headlines=get_sources())
-
 
 
 def get_headlines(source):
@@ -41,6 +36,9 @@ def get_headlines(source):
        return articles
 
 def get_sources():
+       '''
+       Gets all available news sources from the News API
+       '''
 
        api_key = app.config['API_KEY']
        url = (f'https://newsapi.org/v2/sources?apiKey=')
@@ -61,6 +59,3 @@ def get_sources():
                      sources.append(news_sources)
 
        return sources
-
-if __name__ == '__main__':
-  app.run(debug=True)

@@ -1,6 +1,9 @@
 $font-1: 'Playfair Display', serif;
 $font-2: 'Work Sans', sans-serif;
 
+@mixin margins($top-bottom: 2%, $left-right: 2%) {
+   margin: $top-bottom $left-right;
+}
 @mixin font($size, $weight, $color, $family: $font-1) {
    font-family: $family;
    font-size: $size;
@@ -9,10 +12,29 @@ $font-2: 'Work Sans', sans-serif;
 }
 
 nav {
-   margin: 10px 15px;
+   @include margins();
    p {
-      @include font(15px, 600, #57737A)
+      @include font(15px, 600, #57737A);
    }
 }
+
+.sources {
+   margin: 2% 20px;
+}
+
+.source-card {
+   width: 20%;
+   box-shadow: 1px 1px 4px 1px rgba(#57737A, 0.4);
+
+   .grid {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-gap: 10px;
+      grid-auto-flow: row;
+   }
+}
+
+
+
 
 

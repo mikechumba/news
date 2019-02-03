@@ -22,3 +22,7 @@ class HeadlinesTest(unittest.TestCase):
       self.assertEqual(self.headline.url,'https://images.google.com')
       self.assertEqual(self.headline.url_to_image,'https://images.google.com')
       self.assertEqual(self.headline.published_at,'January 25 2019')
+
+
+if __name__ == '__main__':
+   unittest.main()
