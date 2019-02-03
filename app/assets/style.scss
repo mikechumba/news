@@ -1,9 +1,10 @@
 $font-1: 'Playfair Display', serif;
 $font-2: 'Work Sans', sans-serif;
 
-@mixin margins($top-bottom: 2%, $left-right: 2%) {
+@mixin margins($top-bottom: 3%, $left-right: 3%) {
    margin: $top-bottom $left-right;
 }
+
 @mixin font($size, $weight, $color, $family: $font-1) {
    font-family: $family;
    font-size: $size;
@@ -18,12 +19,12 @@ nav {
    }
 }
 
+// styling articles page
 .sources {
-   margin: 2% 20px;
+   @include margins()
 }
 
 .source-card {
-   width: 20%;
    box-shadow: 1px 1px 4px 1px rgba(#57737A, 0.4);
 
    .grid {
@@ -31,6 +32,31 @@ nav {
       grid-template-columns: repeat(3, auto);
       grid-gap: 10px;
       grid-auto-flow: row;
+   }
+
+   p {
+      @include font(14px,normal,#57737A,$font-2)
+   }
+
+}
+
+
+// styling the 404 page
+.error {
+   width: 80%;
+   @include margins(3%, auto);
+
+   p{
+      @include font(15px, 600, #57737A, $font-2);
+   }
+
+   h1 {
+      @include font(60px, 700, #F8F7FD, $font-2);
+   }
+
+   a {
+      text-decoration: none;
+      outline: none;
    }
 }
 

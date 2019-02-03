@@ -53,10 +53,11 @@ def get_sources():
               source_id = source['id']
               name = source['name']
               description = source['description']
+              link = source['url']
 
 
               if the_sources:
-                     news_sources = Sources(source_id,name,description)
+                     news_sources = Sources(source_id,name,description,link)
                      sources.append(news_sources)
 
        return sources

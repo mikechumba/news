@@ -1,9 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
    <div class="sources">
-      {% for element in collection %}
+      {% for source in sources %}
          <div class="source-card grid">
-            <p>{{ element.name }}</p>
+            <img src="{{ source.url }}" alt="">
+            <p>{{ source.name }}</p>
          </div>
       {% endfor %}
    </div>           

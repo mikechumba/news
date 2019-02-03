@@ -1,4 +1,5 @@
 from flask import Flask
+from scss import Scss
 
 app = Flask(__name__)
 
