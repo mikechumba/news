@@ -7,7 +7,7 @@ get_sources = request.get_sources()
 @app.route('/')
 @app.route('/home')
 def home():
-       return render_template('home.html', sources=get_sources)
+       return render_template('index.html', sources=get_sources)
 
 @app.route('/headlines/<news_source>')
 def highlights(news_source):
