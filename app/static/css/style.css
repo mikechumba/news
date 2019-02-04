@@ -43,11 +43,13 @@ nav p {
 }
 
 .error {
-  width: 80%;
-  margin: 3% auto;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .error p {
+  margin-top: 6%;
   font-family: "Work Sans", sans-serif;
   font-size: 15px;
   font-weight: 600;
@@ -55,19 +57,30 @@ nav p {
 }
 
 .error h1 {
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: "Work Sans", sans-serif;
-  font-size: 54px;
+  font-size: 200px;
   font-weight: 700;
   color: #F8F7FD;
 }
 
 .error a {
+  margin-top: 10%;
   text-decoration: none;
   outline: none;
+  border: 2px solid rgba(133, 189, 191, 0.4);
+  padding: 10px 14px;
+  border-radius: 5px;
   font-family: "Work Sans", sans-serif;
   font-size: 15px;
   font-weight: 600;
   color: #57737A;
+}
+
+.error a:hover {
+  border: 2px solid #85bdbf;
+  color: #85BDBF;
 }
 
 .highlight {

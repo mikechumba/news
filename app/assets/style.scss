@@ -50,21 +50,33 @@ nav {
 
 // styling the 404 page
 .error {
-   width: 80%;
-   @include margins(3%, auto);
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
 
    p{
+      margin-top: 6%;
       @include font(15px, 600, #57737A, $font-2);
    }
 
    h1 {
-      @include font(54px, 700, #F8F7FD, $font-2);
+      margin-top: 0;
+      margin-bottom: 0;
+      @include font(200px, 700, #F8F7FD, $font-2);
    }
 
    a {
+      margin-top: 10%;
       text-decoration: none;
       outline: none;
+      border: 2px solid rgba(#85BDBF, 0.4);
+      padding: 10px 14px;
+      border-radius: 5px;
       @include font(15px, 600, #57737A, $font-2);
+      &:hover {
+         border: 2px solid rgba(#85BDBF, 1);
+         color: #85BDBF;
+      }
    }
 }
 
