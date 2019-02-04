@@ -1,45 +1,44 @@
-# Password Locker
+# News Highlights
 
 ###### Authored by Michael Kipchumba
 
-This is a python program that lets users generate and store their passwords.
+News Highlights is a web app that consolidates news sources and articles.
 
 ### Project Approach
    
 | Given       | Action       | Result  |
 | ------------- |:-------------:| -----:|
-| A user has an account  | On logging in to their account | They can access account credentials |
-| User wants to create new credentials  | They select the account they want to add or edit |  A password is generated for the user if he/she doesn't add one |
-| User wants to edit credentials  | They select the credential to edit |  They are presented with the option to edit or delete the credentials |
+| A person wants to view headlines from a select source | They select a news source | Articles from selected sources are displayed |
+| User wants to read an article | They select the article | They are taken to the article on the website of the news site |
 
 ### Project Tools
 
 ##### Languages
 
 - Python
+- Css/Scss
+- HTML
+- Jinja
+
+##### Frameworks
+
+- Flask
+
+###### Additional Tools
+
+- Fonts from [Google Fonts]('fonts.google.com')
 
 ### Setting Up
 
 If you feel like using this project as your own you can do so, following the instructions below:
 
    - Go to your chosen directory.
-   - `git clone https://github.com/mikechumba/pass-locker/`
-   - `cd your-dir/pass-locker`
+   - `git clone https://github.com/mikechumba/news/`
+   - `cd your-dir/news`
 
-This project requires that you have python 3.6+ set up. You can follow the instructions [here]('https://realpython.com/installing-python/') to achieve that, if you haven't
+This project requires that you have python 3.6+ set up. You can follow the instructions [here]('https://realpython.com/installing-python/') to achieve that, if you haven't.
 
-### Running The Project
-
-To run the project simply go to the projects folder using a bash terminal
-
-- `cd .../pass-locker`
-
-Assuming you have python installed,
-
-- Enter `python main.py` in Windows, and `python3.7 main.py` in Linux.
-- Enter `ctrl+Z` to exit the code.
-
-For Visual Studio Code users, the settings for my workspace can be found in the .vscode folder
+You also need to install Flask and all its dependencies. Read about setting up flask [here]('http://flask.pocoo.org/docs/1.0/installation/')
 
 ### Debugging
 
