@@ -12,6 +12,11 @@ $font-2: 'Work Sans', sans-serif;
    color: $color;
 }
 
+a {
+   text-decoration: none;
+   outline: none;
+}
+
 nav {
    @include margins();
    p {
@@ -42,10 +47,6 @@ nav {
    grid-auto-flow: row;
 }
 
-
-
-
-
 // styling the 404 page
 .error {
    width: 80%;
@@ -65,7 +66,44 @@ nav {
    }
 }
 
+//styling the highlights page
+.highlight {
+   @include margins();
+}
 
+.highlight-card {
+   text-decoration: none;
+   outline: none;
+   height: 20vh;
 
+   .image {
+      height: 100%;
+      overflow: hidden;
+      img{
+         width: 100%;
+      }
+   }
+}
 
+.details {
+   width: 55%;
+}
 
+.title {
+   @include font(40px,700,#57737A)
+}
+
+.h-grid {
+   display: grid;
+   grid-template-columns: repeat(2, auto);
+   grid-gap: 15px;
+   grid-auto-flow: row;
+}
+
+.to-left {
+   float: left;
+}
+
+.to-right {
+   float: right;
+}

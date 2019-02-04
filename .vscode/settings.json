@@ -1,4 +1,9 @@
 {
-   "python.pythonPath": "virtual\\Scripts\\python.exe"
-   "python.linting.pylintPath": "/path/to/your/virtualenv/bin/pylint"
+   "python.pythonPath": "virtual\\Scripts\\python.exe",
+   "python.linting.pylintPath": "/path/to/your/virtualenv/bin/pylint",
+   "liveSassCompile.settings.formats": [
+      {
+         "savePath": "app/static/css"
+      }
+   ]
 }
