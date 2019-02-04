@@ -5,7 +5,7 @@ $font-2: 'Work Sans', sans-serif;
    margin: $top-bottom $left-right;
 }
 
-@mixin font($size, $weight, $color, $family: $font-1) {
+@mixin font($size, $weight, $color, $family: $font-2) {
    font-family: $family;
    font-size: $size;
    font-weight: $weight;
@@ -21,6 +21,7 @@ nav {
    @include margins();
    p {
       @include font(18px, 700, #57737A);
+      text-transform: uppercase;
    }
 }
 
@@ -57,31 +58,39 @@ nav {
    }
 
    h1 {
-      @include font(60px, 700, #F8F7FD, $font-2);
+      @include font(54px, 700, #F8F7FD, $font-2);
    }
 
    a {
       text-decoration: none;
       outline: none;
+      @include font(15px, 600, #57737A, $font-2);
    }
 }
 
 //styling the highlights page
 .highlight {
    @include margins();
+   width: 90%;
 }
 
 .highlight-card {
    text-decoration: none;
    outline: none;
-   height: 20vh;
+   // background: #F8F7FD;
+   height: 50vh;
 
    .image {
+      width: 40%;
       height: 100%;
       overflow: hidden;
       img{
-         width: 100%;
+         height: 100%;
       }
+   }
+
+   p {
+      @include font(15px, 600, #85BDBF, $font-2);
    }
 }
 
@@ -90,13 +99,26 @@ nav {
 }
 
 .title {
-   @include font(40px,700,#57737A)
+   @include font(40px,700,#57737A,$font-2);
+   &:after {
+      content: '';
+      display: block;
+      height: 0.1px;
+      border: 2px solid rgba(#85BDBF, 0.4);
+      width: 70%;
+      margin: 10px 0;
+   }
+   &:hover {
+      @include font(40px,700,#83C9F4,$font-2);
+      z-index: 1;
+      margin-bottom: 10px;
+   }
 }
 
 .h-grid {
    display: grid;
    grid-template-columns: repeat(2, auto);
-   grid-gap: 15px;
+   grid-gap: 30px;
    grid-auto-flow: row;
 }
 

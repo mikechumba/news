@@ -36,9 +36,9 @@ If you feel like using this project as your own you can do so, following the ins
    - `git clone https://github.com/mikechumba/news/`
    - `cd your-dir/news`
 
-This project requires that you have python 3.6+ set up. You can follow the instructions [here]('https://realpython.com/installing-python/') to achieve that, if you haven't.
+This project requires that you have python 3.6+ set up. You can follow the instructions [here]('realpython.com/installing-python/') to achieve that, if you haven't.
 
-You also need to install Flask and all its dependencies. Read about setting up flask [here]('http://flask.pocoo.org/docs/1.0/installation/')
+You also need to install Flask and all its dependencies. Read about setting up flask [here]('flask.pocoo.org/docs/1.0/installation/')
 
 ### Debugging
 
