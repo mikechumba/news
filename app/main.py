@@ -5,6 +5,7 @@ from app import app
 get_sources = request.get_sources()
 
 @app.route('/')
+@app.route('/home')
 def home():
        return render_template('home.html', sources=get_sources)
 
